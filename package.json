@@ -1,0 +1,19 @@
+{
+  "name": "@goldenshun/okta-org2org",
+  "version": "1.0.0",
+  "description": "2 applications that demonstrate Okta org2org",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goldenshun/okta-org2org.git"
+  },
+  "author": "Sean Connolly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/goldenshun/okta-org2org/issues"
+  },
+  "homepage": "https://github.com/goldenshun/okta-org2org#readme"
+}
