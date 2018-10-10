@@ -1,0 +1,6 @@
+{
+  "name": "hub",
+  "alias": "hub",
+  "type": "static",
+  "public": true
+}
