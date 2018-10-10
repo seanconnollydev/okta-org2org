@@ -4,7 +4,12 @@
   "description": "2 applications that demonstrate Okta org2org",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bootstrap": "run-p install:hub install:spoke",
+    "dev": "run-p dev:hub dev:spoke",
+    "dev:hub": "cd hub && npm run dev",
+    "dev:spoke": "cd spoke && npm run dev",
+    "install:hub": "cd hub && npm i",
+    "install:spoke": "cd spoke && npm i"
   },
   "repository": {
     "type": "git",
@@ -15,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/goldenshun/okta-org2org/issues"
   },
-  "homepage": "https://github.com/goldenshun/okta-org2org#readme"
+  "homepage": "https://github.com/goldenshun/okta-org2org#readme",
+  "devDependencies": {
+    "npm-run-all": "4.1.3"
+  }
 }
