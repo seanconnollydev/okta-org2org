@@ -14,9 +14,6 @@ class Index extends React.Component {
       baseUrl: 'https://tangogroupspoke.okta.com',
       clientId: '0oa2cwiuiAA855oJG356',
       redirectUri: OKTA_REDIRECT_URI,
-      features: {
-        registration: true,
-      },
       authParams: {
         issuer: 'https://tangogroupspoke.okta.com/oauth2/default',
         responseType: ['id_token', 'token'],
@@ -101,13 +98,16 @@ class Index extends React.Component {
             rel="stylesheet"
           />
         </Head>
-
+        <h1>Spoke</h1>
         <div id="okta-login-container" />
         {login && (
         <div>
-You are logged in as:
+          You are logged in as:
           {login}
           <button type="button" onClick={this.logout}>Logout</button>
+          <div>
+            <a href="https://tangogroupspoke.okta.com/home/bookmark/0oa2cyeipbAT6eeC9356/2557">Go to Hub App</a>
+          </div>
         </div>
         )}
       </React.Fragment>

@@ -14,9 +14,6 @@ class Index extends React.Component {
       baseUrl: 'https://tangogrouphub.okta.com',
       clientId: '0oa2cxjbgBuegP0SF356',
       redirectUri: OKTA_REDIRECT_URI,
-      features: {
-        registration: true,
-      },
       authParams: {
         issuer: 'https://tangogrouphub.okta.com/oauth2/default',
         responseType: ['id_token', 'token'],
@@ -101,7 +98,7 @@ class Index extends React.Component {
             rel="stylesheet"
           />
         </Head>
-
+        <h1>Hub</h1>
         <div id="okta-login-container" />
         {login && (
         <div>
