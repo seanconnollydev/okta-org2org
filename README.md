@@ -17,6 +17,8 @@ npm run dev
 
 # Scenarios
 ## From Spoke, go to a specific resource in hub
+In this scenario, a user logs into the Spoke application and then via a single link can access a specific resource in the Hub application.
+
 - Go to http://localhost:3001
 - Login with sconnolly+oktaspoke@tangogroup.com (login will hang so you need to refresh)
 - Click `Go to Hub Other`
