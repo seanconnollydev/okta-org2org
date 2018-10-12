@@ -1,9 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 
-const OKTA_REDIRECT_URI = 'http://localhost:3001';
+const OKTA_REDIRECT_URI = 'http://localhost:3000';
 
-class Index extends React.Component {
+class Other extends React.Component {
   state = {
     login: null,
   };
@@ -11,11 +11,11 @@ class Index extends React.Component {
   componentDidMount() {
     // eslint-disable-next-line no-undef
     this.signIn = new OktaSignIn({
-      baseUrl: 'https://tangogroupspoke.okta.com',
-      clientId: '0oa2cwiuiAA855oJG356',
+      baseUrl: 'https://tangogrouphub.okta.com',
+      clientId: '0oa2cxjbgBuegP0SF356',
       redirectUri: OKTA_REDIRECT_URI,
       authParams: {
-        issuer: 'https://tangogroupspoke.okta.com/oauth2/default',
+        issuer: 'https://tangogrouphub.okta.com/oauth2/default',
         responseType: ['id_token', 'token'],
         scopes: ['openid', 'email', 'profile'],
       },
@@ -98,19 +98,13 @@ class Index extends React.Component {
             rel="stylesheet"
           />
         </Head>
-        <h1>Spoke</h1>
+        <h1>Hub: Other</h1>
         <div id="okta-login-container" />
         {login && (
         <div>
-          You are logged in as:
+You are logged in as:
           {login}
           <button type="button" onClick={this.logout}>Logout</button>
-          <div>
-            <a href="https://tangogroupspoke.okta.com/home/bookmark/0oa2cyeipbAT6eeC9356/2557">Go to Hub App</a>
-          </div>
-          <div>
-            <a href="https://tangogroupspoke.okta.com/app/okta_org2org/exk2cxtz6SsAHx4Ep356/sso/saml?RelayState=http://localhost:3000/other">Go to Hub Other</a>
-          </div>
         </div>
         )}
       </React.Fragment>
@@ -118,4 +112,4 @@ class Index extends React.Component {
   }
 }
 
-export default Index;
+export default Other;
