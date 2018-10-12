@@ -1,6 +1,20 @@
 # okta-org2org
 2 applications that demonstrate org2org SSO with Okta
 
+# Getting Started
+```
+# Ensure correct node version and install
+nvm use
+npm i
+npm run bootstrap
+
+# Run both apps simultaneously
+npm run dev
+
+# Hub is running on http://localhost:3000
+# Spoke is running on http://localhost:3001
+```
+
 # Scenarios
 ## From Spoke, go to a specific resource in hub
 - Go to http://localhost:3001
